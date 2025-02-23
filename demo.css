@@ -1,0 +1,55 @@
+*{
+    box-sizing: border-box;
+}
+.container{
+    margin: 0 auto;
+    width: 1000px;
+    background-color: #fff;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+hr{
+    height: 3px; 
+    background-color: black;
+    border: none;
+}
+.skiils{
+    display: flex;
+    justify-content: space-around;
+}
+.skills1{
+    margin-left: -32px;
+
+}
+.skills4{
+    margin-left: -32px;
+
+}
+.skill{
+    display: flex;
+    justify-content: space-around;
+}
+.skill>p{
+    margin-left: -40px;
+}
+label{
+    opacity: 0.5;
+    margin-top: -20px;
+}
+h2 {
+    margin-bottom: 0; 
+}
+h4 {
+    margin-bottom: 0; 
+}
+.skills2{
+    opacity: 0.5;
+}
+.skills4{
+    opacity: 0.5;
+}
+.skill2{
+    opacity: 0.5;
+}
