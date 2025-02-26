@@ -10,6 +10,10 @@
     display: flex;
     justify-content: space-between;
 }
+
+h5{
+    opacity: 0.5;
+}
 hr{
     height: 3px; 
     background-color: black;
