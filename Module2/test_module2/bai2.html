@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User & Post Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .section { margin-bottom: 32px; }
+        .result { margin-top: 10px; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+<div class="container py-4">
+    <h1 class="mb-4 text-center">Quản lý Users & Posts</h1>
+
+    <!-- Đăng nhập -->
+    <div class="section card p-3 mb-3">
+        <h4>Đăng nhập</h4>
+        <div class="row g-2 align-items-center">
+            <div class="col-md-4">
+                <input id="login-email" class="form-control" placeholder="Email">
+            </div>
+            <div class="col-md-4">
+                <input id="login-password" type="password" class="form-control" placeholder="Password">
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-primary w-100" onclick="login()">Đăng nhập</button>
+            </div>
+        </div>
+        <div id="login-result" class="result"></div>
+    </div>
+
+    <!-- Đăng ký -->
+    <div class="section card p-3 mb-3">
+        <h4>Đăng ký</h4>
+        <div class="row g-2 align-items-center">
+            <div class="col-md-3">
+                <input id="reg-first" class="form-control" placeholder="First name">
+            </div>
+            <div class="col-md-3">
+                <input id="reg-last" class="form-control" placeholder="Last name">
+            </div>
+            <div class="col-md-3">
+                <input id="reg-email" class="form-control" placeholder="Email">
+            </div>
+            <div class="col-md-3">
+                <input id="reg-password" type="password" class="form-control" placeholder="Password">
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-md-3 offset-md-9">
+                <button class="btn btn-success w-100" onclick="register()">Đăng ký</button>
+            </div>
+        </div>
+        <div id="register-result" class="result"></div>
+    </div>
+
+    <!-- Xem danh sách users -->
+    <div class="section card p-3 mb-3">
+        <h4>Danh sách Users</h4>
+        <div class="row g-2 align-items-center mb-2">
+            <div class="col-md-6">
+                <input id="user-keyword" class="form-control" placeholder="Tìm theo tên hoặc email">
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-info w-100" onclick="searchUsers()">Tìm kiếm</button>
+            </div>
+        </div>
+        <div id="users-list" class="result"></div>
+    </div>
+
+    <!-- Xem danh sách posts -->
+    <div class="section card p-3 mb-3">
+        <h4>Danh sách Posts</h4>
+        <button class="btn btn-secondary mb-2" onclick="showPosts()">Hiển thị tất cả posts</button>
+        <div id="posts-list" class="result"></div>
+    </div>
+
+    <!-- Xem chi tiết post -->
+    <div class="section card p-3 mb-3">
+        <h4>Chi tiết Post</h4>
+        <div class="row g-2 align-items-center mb-2">
+            <div class="col-md-4">
+                <input id="post-id" class="form-control" placeholder="Nhập ID post">
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-warning w-100" onclick="showPostDetail()">Xem chi tiết</button>
+            </div>
+        </div>
+        <div id="post-detail" class="result"></div>
+    </div>
+
+    <!-- Tìm post theo user -->
+    <div class="section card p-3 mb-3">
+        <h4>Tìm post theo User</h4>
+        <div class="row g-2 align-items-center mb-2">
+            <div class="col-md-6">
+                <input id="user-email" class="form-control" placeholder="Nhập email user">
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-dark w-100" onclick="searchPostsByUser()">Tìm kiếm</button>
+            </div>
+        </div>
+        <div id="user-posts" class="result"></div>
+    </div>
+</div>
+<script src="users.js"></script>
+<script src="posts.js"></script>
+<script src="bai2.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
